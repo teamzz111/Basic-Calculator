@@ -3,58 +3,65 @@
     <div class="col-md-12">
       <div class="text-center">
         <br>
-        <div id="calculator-wrapper">
+        <div id="calculator">
           <div class="row">
             <div class="col-md-12">
               <div class="screen">
-                <p id="current-stack">0</p>
+                <p id="current-stack">{{operation}}</p>
               </div>
             </div>
           </div>
 
-          <div class="buttons-wrapper">
+          <div class="buttons">
             <div class="row">
               <div class="col-md-12">
-                <div class="button btn-number">7</div>
-                <div class="button btn-number">8</div>
-                <div class="button btn-number">9</div>
-                <div class="button btn-operator">×</div>
+                <div class="button " (click) = "add('7')">7</div>
+                <div class="button " (click) = "add('8')">8</div>
+                <div class="button " (click) = "add('9')">9</div>
+                <div class="button btn-operator" (click) = "add('*')">×</div>
               </div>
             </div>
           </div>
-          <div class="buttons-wrapper">
+          <div class="buttons">
             <div class="row">
               <div class="col-md-12">
-                <div class="button btn-number">4</div>
-                <div class="button btn-number">5</div>
-                <div class="button btn-number">6</div>
-                <div class="button btn-operator">-</div>
+                <div class="button" (click) = "add('4')">4</div>
+                <div class="button " (click) = "add('5')">5</div>
+                <div class="button " (click) = "add('6')">6</div>
+                <div class="button btn-operator" (click) = "add('-')">-</div>
               </div>
             </div>
           </div>
-          <div class="buttons-wrapper">
+          <div class="buttons">
             <div class="row">
               <div class="col-md-12">
-                <div class="button btn-number">1</div>
-                <div class="button btn-number">2</div>
-                <div class="button btn-number">3</div>
-                <div class="button btn-operator">+</div>
+                <div class="button " (click) = "add('1')">1</div>
+                <div class="button " (click) = "add('2')">2</div>
+                <div class="button " (click) = "add('3')">3</div>
+                <div class="button btn-operator" (click) = "add('+')">+</div>
               </div>
             </div>
           </div>
-          <div class="buttons-wrapper">
+          <div class="buttons">
             <div class="row">
               <div class="col-md-12">
-                <div class="button btn-zero btn-number">0</div>
-                <div class="button" id="btn-decimal">.</div>
-                <div class="button" id="btn-calculate">=</div>
+                <div class="button" id="btn-operator" (click) = "add('/')">/</div>
+                <div class="button " (click) = "add('0')">0</div>
+                <div class="button" id="btn-operator" (click) = "add('%')">%</div>
+                <div class="button " (click) = "clean(null)">CE</div>
               </div>
             </div>
           </div>
+          <div class="buttons">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="button" id="btn-calculate" (click)="calc()" style = "min-width: 330px">=</div>
+                </div>
+              </div>
+            </div>
         </div>
 
       </div>
     </div>
   </div>
 </div>
-<!-- enable keys -->
