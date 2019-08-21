@@ -18,7 +18,6 @@ export class AppComponent {
       if (this.operation.search('/0') > 0){
         throw new Error('No se puede dividir en cero');
       }
-      // tslint:disable-next-line: no-eval
       this.operation = eval(this.operation);
     } catch (e) {
       alert('Escriba bien los números.');
